@@ -1,11 +1,11 @@
-
+//test 17/04/23
 const x = 0
 let currentResult = x
 let logEntries = [];
 // users input value
 function getUserNumberInput(){
     return parseInt(usrInput.value)
-}
+} 
 
 function createAndWriteOutput(operator, resultBeforeCalc, calcNumber){
     const calcDescription = `${resultBeforeCalc} ${operator} ${calcNumber}`
