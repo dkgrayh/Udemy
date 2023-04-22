@@ -20,12 +20,12 @@ function writeToLog(operationLog, prevResult, number, resultLog) {
     console.log(logEntries)
 }
 function calculateResult(calculationType) {
-    if (calculationType !== 'ADD' && calculationType !== 'SUBTRACT' && calculationType !== 'MULTIPLY' && calculationType !== 'DIVIDE' || !enteredNumber) {
-        return;
-    }
     const enteredNumber = getUserNumberInput()
     const initialResult = currentResult
     let mathOperator;
+    if (calculationType !== 'ADD' && calculationType !== 'SUBTRACT' && calculationType !== 'MULTIPLY' && calculationType !== 'DIVIDE' || !enteredNumber) {
+        return;
+    }
     if (calculationType === 'ADD') {
         currentResult += enteredNumber
         mathOperator = '+'
@@ -38,8 +38,7 @@ function calculateResult(calculationType) {
     } else if (calculationType === 'DIVIDE') {
         calculateResult /= enteredNumber
         mathOperator = '/'
-    }
-    {
+    } {
         createAndWriteOutput(mathOperator, initialResult, enteredNumber)
         writeToLog(calculationType, initialResult, enteredNumber, currentResult)
     }
